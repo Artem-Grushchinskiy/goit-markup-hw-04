@@ -125,7 +125,10 @@ body {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-
+.footer-deco {
+  display: flex;
+  flex-direction: row;
+}
 .footer-logo {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -142,6 +145,33 @@ body {
   color: var(--footer-text);
   width: 264px;
   margin-top: 16px;
+}
+.footer-logo-block {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.footer-social-block {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 120px;
+}
+.footer-social {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-special-light);
+  letter-spacing: 0.02em;
+}
+.social-list {
+  margin-top: 16px;
+}
+.footer-sl-color {
+  background-color: transparent;
+}
+.footer-sl-color:hover {
+  background-color: #31d0aa;
 }
 
 /* --------------- gallery ----------- */
@@ -409,17 +439,24 @@ body {
 .social-item {
 }
 .social-link {
-  box-sizing: border-box;
-  width: 40px;
+  text-decoration: none;
   height: 40px;
-  background-color: var(--logo-iris);
-  background-size: 40px 40px;
+  width: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
-  margin: 0 auto;
-  text-align: center;
+  /* background-color: var(--logo-iris); */
 }
+.team-sl-color {
+  background-color: var(--logo-iris);
+}
+
 .social-icon {
   fill: var(--color-special-light);
+}
+.team-sl-color:hover {
+  background-color: var(--accent-button);
 }
 
 /*------------------ Customers --------- */
