@@ -27,6 +27,7 @@ img {
   --contacts-color: #434455;
   --accent-button: #404bbf;
   --light-slate: #8e8f99;
+  --bg-color-footer-icon: background-color: rgba(255, 255, 255, 0.1);
 }
 body {
   background-color: var(--color-special-light);
@@ -47,12 +48,16 @@ body {
 }
 
 /* ---------------- header -------------------------------------- */
-
+.header {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid var(--footer-text);
+}
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--footer-text);
 }
 .header-nav {
   display: flex;
@@ -120,6 +125,9 @@ body {
 /* ---------------footer------------- */
 
 .footer {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
   text-decoration: none;
   background-color: var(--footer-nav-color);
   padding-top: 100px;
@@ -127,7 +135,6 @@ body {
 }
 .footer-deco {
   display: flex;
-  flex-direction: row;
 }
 .footer-logo {
   font-family: "Raleway", sans-serif;
@@ -152,25 +159,39 @@ body {
   flex-direction: column;
 }
 .footer-social-block {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
   margin-left: 120px;
 }
 .footer-social {
   font-weight: 500;
-  font-size: 16px;
   line-height: 1.5;
   color: var(--color-special-light);
-  letter-spacing: 0.02em;
 }
 .social-list {
+}
+.footer-s-list {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
   margin-top: 16px;
+  gap: 16px;
 }
-.footer-sl-color {
-  background-color: transparent;
+.footer-s-item {
 }
-.footer-sl-color:hover {
+.footer-s-link {
+  text-decoration: none;
+  height: 40px;
+  width: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-s-icon {
+  fill: var(--color-special-light);
+}
+
+.footer-s-link:hover {
   background-color: #31d0aa;
 }
 
@@ -244,8 +265,7 @@ body {
 /* -------------------------- Hero ------------------------------------ */
 
 .hero {
-  width: 1440px;
-  height: 600px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(
@@ -313,6 +333,7 @@ body {
   background-size: 64px 64px;
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 4px;
 }
 .icon-antenna::before {
   background-image: url(../img/antenna.svg);
@@ -388,10 +409,10 @@ body {
 /*------------------ team ------------*/
 
 .team {
-  width: 1440px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  background: var(--secondary-bg-color);
+  background-color: var(--secondary-bg-color);
 }
 .team-list {
   text-decoration: none;
@@ -406,13 +427,7 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 .team-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 32px 16px;
-  padding: 0px;
-  gap: 8px;
+  padding: 32px 16px;
 }
 .team-names {
   font-weight: 500;
@@ -433,7 +448,7 @@ body {
   list-style: none;
   text-decoration: none;
   justify-content: space-between;
-  height: 40px;
+  margin-top: 8px;
   gap: 24px;
 }
 .social-item {
@@ -463,30 +478,30 @@ body {
 .customers {
   padding-top: 130px;
   padding-bottom: 120px;
-  text-align: center;
-  background-color: var(--color-special-light);
 }
 .customers-list {
   display: flex;
   justify-content: space-between;
   list-style: none;
   text-decoration: none;
-  margin-bottom: 50px;
 }
 .customers-item {
-  box-sizing: border-box;
-  display: block;
-  background-size: cover;
+}
+.cust-beauty {
+  width: 168px;
+  height: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid var(--light-slate);
   border-radius: 4px;
 }
-
 .cust-icons {
   fill: rgba(0, 0, 0, 0.25);
 }
-.customers-item:is(:hover, :focus) {
+.cust-beauty:is(:hover, :focus) {
   border-color: var(--accent-button);
 }
-.customers-item:is(:hover, :focus) .cust-icons {
+.cust-beauty:is(:hover, :focus) .cust-icons {
   fill: var(--accent-button);
 }
