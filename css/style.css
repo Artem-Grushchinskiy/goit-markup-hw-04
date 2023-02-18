@@ -49,9 +49,6 @@ body {
 
 /* ---------------- header -------------------------------------- */
 .header {
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
   border-bottom: 1px solid var(--footer-text);
 }
 .header-container {
@@ -125,10 +122,6 @@ body {
 /* ---------------footer------------- */
 
 .footer {
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-  text-decoration: none;
   background-color: var(--footer-nav-color);
   padding-top: 100px;
   padding-bottom: 100px;
@@ -191,7 +184,7 @@ body {
   fill: var(--color-special-light);
 }
 
-.footer-s-link:hover {
+.footer-s-link:is(:hover, :focus) {
   background-color: #31d0aa;
 }
 
@@ -408,9 +401,6 @@ body {
 /*------------------ team ------------*/
 
 .team {
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
   background-color: var(--secondary-bg-color);
 }
 .team-list {
@@ -467,7 +457,7 @@ body {
 .social-icon {
   fill: var(--color-special-light);
 }
-.team-sl-color:hover {
+.team-sl-color:is(:hover, :focus) {
   background-color: var(--accent-button);
 }
 
@@ -492,7 +482,7 @@ body {
   border-radius: 4px;
 }
 .cust-icons {
-  fill: rgba(0, 0, 0, 0.25);
+  fill: var(--light-slate);
 }
 .cust-beauty:is(:hover, :focus) {
   border-color: var(--accent-button);
